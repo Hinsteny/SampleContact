@@ -1,0 +1,7 @@
+.ContactView {
+	color:green;
+}
+
+.ContactView .tableContact{
+	max-width:90%;
+}

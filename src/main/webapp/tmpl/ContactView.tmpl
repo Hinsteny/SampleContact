@@ -1,0 +1,31 @@
+<script id="tmpl-ContactView" type="text/html">
+	<div class="ContactView">
+		<h2>Contact</h2>
+		<table class="table tableContact">
+			<tr>
+				<th>first name</th>
+				<th>last name</th>
+				<th>Groups</th>
+				<th><button class="add btn btn-primary">Add Contact</button></th>
+			</tr>
+			
+			{{#each contactList}}
+			<tr data-contact-id="{{id}}">
+			 	<td>{{firstName}}</td>
+			 	<td>{{lastName}}</td>
+			 	<td>
+			 		{{#each groups}}
+			 			{{groupName}},
+			 		{{/each}}
+			 	</td>
+	    		<td>
+	    			<button class="edit btn btn-primary">Edit</button>
+					<button class="setGroup btn btn-info">change groups</button>
+					<button class="delete btn btn-danger">Delete</button>
+	    		</td>
+	    	</tr>
+    		{{/each}}
+			
+		</table>
+	</div>
+</script>  

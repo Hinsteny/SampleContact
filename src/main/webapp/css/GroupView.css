@@ -1,0 +1,8 @@
+.GroupView {
+	font-color:green;
+}
+
+.GroupView .tableGroup{
+		max-width:90%;
+	font-color:red;
+}

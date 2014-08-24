@@ -1,0 +1,12 @@
+body {
+	background: #696969;
+}
+
+.MainView {
+	border:2px solid black;
+	border-radius:20px;
+	margin-top:50px;
+	padding:20px;
+	z-index:0;
+	background: white;
+}

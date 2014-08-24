@@ -1,0 +1,29 @@
+<script id="tmpl-GroupOperate" type="text/html">
+<div class="GroupOperate">
+	<div class="GroupOperateShadow">
+	</div>
+	<div class="GroupOperate-DialogPrompt">
+		<div class="form-horizontal">
+			<legend>{{data.title}}</legend>
+			<div class="control-group">
+				<label class="control-label" >Group Name:</label>
+					<div class="controls">
+						<input groupId="{{#if data.group}}{{data.group.id}}{{/if}}" id="groupName" type="text" value="{{#if data.group}}{{data.group.groupName}}{{/if}}" />
+						<span id="groupHelpText" class="help-block"></span>
+	    			</div>
+			</div>
+			
+			<div class="form-actions">
+			
+			{{#if data.group}}
+				<button type="button" class="btn btn-primary update">Update</button>
+			{{else}}
+				<button type="button" class="btn btn-primary add">Add</button>
+			{{/if}}
+				<button type="button" class="btn btn-default cancel">Cancel</button>
+			</div>
+						
+	 	</div>
+	</div>
+</div>
+</script>  

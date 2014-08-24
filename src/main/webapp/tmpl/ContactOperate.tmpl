@@ -1,0 +1,62 @@
+<script id="tmpl-ContactOperate" type="text/html">
+<div class="ContactOperate">
+	<div class="ContactOperateShadow">
+	</div>
+	{{#if data.changeGroup}}
+		<div class="ContactOperate-DialogPrompt" >
+			<div class="form-horizontal">
+				<legend data-contact-id="{{data.contactId}}">{{data.title}}</legend>
+				
+				<div class="groups">
+				{{#each data.groupList}}
+					<label class="checkbox" >
+		      			<input type="checkbox" groupId="{{id}}" />{{groupName}}
+					</label>
+	    		{{/each}}
+				</div>
+				
+				{{#unless data.groupList}}
+					<p class='text-error'>no group to add</p>
+				{{/unless}}
+				<div class="form-actions">
+					<button type="button" class="btn btn-primary setGroup">update</button>
+					<button type="button" class="btn btn-default cancel">Cancel</button>
+				</div>
+			</div>
+		</div>
+	{{else}}
+		<div class="ContactOperate-DialogPrompt">
+			<div class="form-horizontal">
+				<legend>{{data.title}}</legend>
+				
+				<div class="control-contact">
+					<label class="control-label" >First Name:</label>
+						<div class="controls">
+							<input contactId="{{#if data.contact}}{{data.contact.id}}{{/if}}" id="firstName" type="text" value="{{#if data.contact}}{{data.contact.firstName}}{{/if}}" />
+							<span id="firstNameHelpText" class="help-block"></span>
+		    			</div>
+				</div>
+				
+				<div class="control-contact">
+					<label class="control-label" >Last Name:</label>
+						<div class="controls">
+							<input id="lastName" type="text" value="{{#if data.contact}}{{data.contact.lastName}}{{/if}}" />
+							<span id="lastNameHelpText" class="help-block"></span>
+		    			</div>
+				</div>
+				
+				<div class="form-actions">
+				
+				{{#if data.contact}}
+					<button type="button" class="btn btn-primary update">update</button>
+				{{else}}
+					<button type="button" class="btn btn-primary add">add</button>
+				{{/if}}
+					<button type="button" class="btn btn-default cancel">Cancel</button>
+				</div>
+							
+		 	</div>
+		</div>
+	{{/if}}
+</div>	
+</script>  
